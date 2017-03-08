@@ -1,22 +1,19 @@
 function main() {
     console.log("In main function");
     addEventListener("submit",validateForm)
-    var formValid = false
+    var formValid = true;
 }
 
 function validateForm(event){
     event.preventDefault();
-    var myForm = document.getElementById("myForm")
+    var xform = document.getElementById("myForm");
     console.log("Validating Form");
-    formValid = true
-    if (myForm.name.value == "") {
+    formValid = false;
+    myForm.errorName.style.display = "block";
+    
+    if (xform.value == "") {
         console.log("bgwgfrw");
-        myForm.errorName.style.display = "block"
+
     }
 
-    if (myForm.age.value == "") {
-        console.log("bgwgfrw");
-        myForm.errorAge.style.display = "block"
-    }
-    
 }
