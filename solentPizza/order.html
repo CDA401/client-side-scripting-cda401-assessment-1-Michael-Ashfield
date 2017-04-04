@@ -4,8 +4,8 @@
 		<meta charset="utf-8">
 		<meta name="Solent Pizzas" content="Tastey fresh pizza from the heart of Southampton">
 		<title>Solent Pizzas</title>
-		<link rel="stylesheet" href="styles/main.css" type="text/css" />
-		<script type="text/javascript" src="scripts/main.js" rel="stylesheet"></script>
+		<link rel="stylesheet" href="styles/order.css" type="text/css" />
+		<script type="text/javascript" src="scripts/orderscript.js" rel="stylesheet"></script>
 	</head>
 	
 	<body onload="main()">
@@ -14,38 +14,44 @@
             	<ul>
             		<li><a href="index.html">Home</a></li>
             		<li><a href="order.html">Order</a></li>
-            		<li><a href="contact.html"></a></li>
+            		<li><a href="contact.html">Contact</a></li>
             	</ul>
             </nav>
         </header>
         <main>
             <aside> 
-                <form>
-                    <div id="size_area">
-                    <h3>Pick your size*</h3>
-                        <p><input type="radio" name="size" value="small_size" data-price="5" data-desc="Small Pizza">Small <span id="price_text">£5</span></p>
-                        <p><input type="radio" name="size" value="medium_size" data-price="7.5" data-desc="Medium Pizza">Medium <span id="price_text">£7.50</span></p>
-                        <p><input type="radio" name="size" value="large_size" data-price="10" data-desc="Large Pizza">Large <span id="price_text">£10</span></p>
-                        <p><input type="radio" name="size" value="xlarge_size" data-price="12.5" data-desc="X-Large Pizza">X-Large <span id="price_text">£12.50</span></p>
-                    </div>
-                    <div id="topping_area">
-                        <h3>Pick your topping*</h3>
+                <form id="order_form">
+                    <fieldset id="size_area">
+                    <legend>Pick your size*</legend>
+                        <p><input type="radio" name="size" value="small_size" data-price="5" data-desc="Small Pizza"/>Small <span id="price_text">£5</span></p>
+                        <p><input type="radio" name="size" value="medium_size" data-price="7.5" data-desc="Medium Pizza"/>Medium <span id="price_text">£7.50</span></p>
+                        <p><input type="radio" name="size" value="large_size" data-price="10" data-desc="Large Pizza"/>Large <span id="price_text">£10</span></p>
+                        <p><input type="radio" name="size" value="xlarge_size" data-price="12.5" data-desc="X-Large Pizza"/>X-Large <span id="price_text">£12.50</span></p>
+                    </fieldset>
+                    <fieldset id="topping_area">
+                        <legend>Pick your topping*</legend>
                         <p><input type="checkbox" name="topping" value="cheese_topping" data-price="0.2" data-desc="Cheese"/>Cheese <span id="price_text">£0.20</span></p>
                         <p><input type="checkbox" name="topping" value="mushrooms_topping" data-price="0.4" data-desc="Mushrooms"/>Mushrooms <span id="price_text">£0.40</span></p>
                         <p><input type="checkbox" name="topping" value="ham_topping" data-price="0.5" data-desc="Ham"/>Ham <span id="price_text">£0.50</span></p>
                         <p><input type="checkbox" name="topping" value="anchovies_topping" data-price="0.6" data-desc="Anchovies"/>Anchovies <span id="price_text">£0.60</span></p>
-                    </div>
-                    <div id="extra_area">
-                        <h3>Add any extras</h3>
+                    </fieldset>
+                    <fieldset id="extra_area">
+                        <legend>Add any extras</legend>
                         <p><input type="checkbox" name="extra" value="chips_extra" data-price="1.5" data-desc="Chips"/>Chips <span id="price_text">£1.50</span></p>
                         <p><input type="checkbox" name="extra" value="garlic_bread_extra" data-price="2" data-desc="Garlic Bread"/>Garlic Bread <span id="price_text">£2</span></p>
-                    </div>
-                    <div id="delivery_area">
-                        <h3>Delivery information</h3>
-                        <p>Address line 1<input type="text" name="address_1_delivery"/></p>
-                        <p>Postcode<input type="text" name="postcode_delivery"/></p>
-                    </div>
+                    </fieldset>
+                    <fieldset id="delivery_area">
+                        <legend>Delivery information</legend>
+                        <p>Address line 1 <input type="text" name="address_1_delivery" required/></p>
+                        <p>Postcode <input type="text" name="postcode_delivery" required/></p>
+                    </fieldset>
+                    <input type="submit" name="place_order" value="Place order"/>
+                    <input type="submit" name="reset" value="Reset"/>
                 </form>
+                <div id="output_area">
+                    <p id="order_output"></p>
+                    <p id="total_cost_output"></p>
+                </div>
             </aside>
         </main>
 	</body>
