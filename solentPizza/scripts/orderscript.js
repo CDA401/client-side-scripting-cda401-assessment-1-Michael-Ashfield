@@ -16,7 +16,7 @@ function loopForm() { //Loops whole form when any part updated
     loopFormSize();
     loopFormTopping();
     console.log("total price= " + total.toFixed(2));//Total rounded to 2 decimal place
-    document.getElementById("total_cost_output").innerHTML = total.toFixed(2);
+    document.getElementById("total_cost_output").innerHTML = "£" + total.toFixed(2);
 }
 
 function loopFormSize(event){ //Loops size form
@@ -39,19 +39,16 @@ function loopFormTopping(event){ //Loops size form
     }
 }
 
-function addToTotal(cost){
-    total += parseFloat(cost);
-    return total;
+function addToTotal(cost){ //Adds the item cost to total to the total
+    return total += parseFloat(cost);
 }
-
-
 
 function addToOrder(item){ //Adds item to total and list FINISH ORDER SUMMERY
     myList.push(item); //add to array
     console.log(myList);
-    var lLength = myList.length;
+    var lLength = myList.length; //get lenth of array
     var text = "<ul>";
-    for (var i = 0; i < lLength; i++){ //pass array into text to make unordered list
+    for (var i = 0; i < lLength; i++){ //pass array into text to make unordered list for lenth of array
         text += "<li>" + myList[i] + "</li>";
     }
     text += "</ul>";
