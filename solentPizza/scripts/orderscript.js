@@ -15,15 +15,15 @@ function loopForm() { //Loops whole form when any part updated
     myList = [];
     loopFormSize();
     loopFormTopping();
-    console.log("total price= " + total);
-    document.getElementById("total_cost_output").innerHTML = total;
+    console.log("total price= " + total.toFixed(2));//Total rounded to 2 decimal place
+    document.getElementById("total_cost_output").innerHTML = total.toFixed(2);
 }
 
 function loopFormSize(event){ //Loops size form
     for (var i = 0; i < form.size.length; i++){
         if (form.size[i].checked){
             console.log("You selected " + form.size[i].value);
-            addToOrder(form.size[i]); //Adds to order summery
+            addToOrder(form.size[i].dataset.desc); //Adds to order summery
             addToTotal(form.size[i].dataset.price); //Adds to total price
         }
     }
@@ -40,7 +40,7 @@ function loopFormTopping(event){ //Loops size form
 }
 
 function addToTotal(cost){
-    total += parseFloat(cost.toFixed(2));//Adds to total and rounds to 2 decimal places
+    total += parseFloat(cost);
     return total;
 }
 
