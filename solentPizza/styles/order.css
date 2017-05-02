@@ -1,0 +1,10 @@
+#required_size {
+    display: none;
+}
+#required_topping {
+     display: none;
+}
+
+.required {
+    color: red;
+}

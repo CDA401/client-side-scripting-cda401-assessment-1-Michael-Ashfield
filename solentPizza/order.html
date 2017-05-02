@@ -23,21 +23,23 @@
                 <form id="order_form">
                     <fieldset id="size_area">
                     <legend>Pick your size*</legend>
+                    <p id="required_size"><span class="required"></b>Pizza size required</span></p>
                         <p><input type="radio" name="size" value="small_size" data-price="5" data-desc="Small Pizza"/>Small <span id="price_text">£5</span></p>
-                        <p><input type="radio" name="size" value="medium_size" data-price="7.5" data-desc="Medium Pizza"/>Medium <span id="price_text">£7.50</span></p>
+                        <p><input type="radio" name="size" value="medium_size" data-price="7.50" data-desc="Medium Pizza"/>Medium <span id="price_text">£7.50</span></p>
                         <p><input type="radio" name="size" value="large_size" data-price="10" data-desc="Large Pizza"/>Large <span id="price_text">£10</span></p>
-                        <p><input type="radio" name="size" value="xlarge_size" data-price="12.5" data-desc="X-Large Pizza"/>X-Large <span id="price_text">£12.50</span></p>
+                        <p><input type="radio" name="size" value="xlarge_size" data-price="12.50" data-desc="X-Large Pizza"/>X-Large <span id="price_text">£12.50</span></p>
                     </fieldset>
                     <fieldset id="topping_area">
                         <legend>Pick your topping*</legend>
-                        <p><input type="checkbox" name="topping" value="cheese_topping" data-price="0.2" data-desc="Cheese"/>Cheese <span id="price_text">£0.20</span></p>
-                        <p><input type="checkbox" name="topping" value="mushrooms_topping" data-price="0.4" data-desc="Mushrooms"/>Mushrooms <span id="price_text">£0.40</span></p>
-                        <p><input type="checkbox" name="topping" value="ham_topping" data-price="0.5" data-desc="Ham"/>Ham <span id="price_text">£0.50</span></p>
-                        <p><input type="checkbox" name="topping" value="anchovies_topping" data-price="0.6" data-desc="Anchovies"/>Anchovies <span id="price_text">£0.60</span></p>
+                        <p id="required_topping"><span class="required">Topping required</span></p>
+                        <p><input type="checkbox" name="topping" value="cheese_topping" data-price="0.20" data-desc="Cheese"/>Cheese <span id="price_text">£0.20</span></p>
+                        <p><input type="checkbox" name="topping" value="mushrooms_topping" data-price="0.40" data-desc="Mushrooms"/>Mushrooms <span id="price_text">£0.40</span></p>
+                        <p><input type="checkbox" name="topping" value="ham_topping" data-price="0.50" data-desc="Ham"/>Ham <span id="price_text">£0.50</span></p>
+                        <p><input type="checkbox" name="topping" value="anchovies_topping" data-price="0.60" data-desc="Anchovies"/>Anchovies <span id="price_text">£0.60</span></p>
                     </fieldset>
                     <fieldset id="extra_area">
                         <legend>Add any extras</legend>
-                        <p><input type="checkbox" name="extra" value="chips_extra" data-price="1.5" data-desc="Chips"/>Chips <span id="price_text">£1.50</span></p>
+                        <p><input type="checkbox" name="extra" value="chips_extra" data-price="1.50" data-desc="Chips"/>Chips <span id="price_text">£1.50</span></p>
                         <p><input type="checkbox" name="extra" value="garlic_bread_extra" data-price="2" data-desc="Garlic Bread"/>Garlic Bread <span id="price_text">£2</span></p>
                     </fieldset>
                     <fieldset id="delivery_area">
