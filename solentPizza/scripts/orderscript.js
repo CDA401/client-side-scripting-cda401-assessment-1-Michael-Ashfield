@@ -1,6 +1,8 @@
 var form;
 var total = 0;
 var myList = []; //Create array
+var size_selected;
+var topping_selected;
 
 
 function main(){
@@ -14,6 +16,8 @@ function main(){
 function loopForm() { //Loops whole form when any part updated
     total = 0; //Resets total so it can be recalculated
     myList = [];
+    size_selected = false;
+    topping_selected = false;
     loopFormSize();
     loopFormTopping();
     loopFormExtra();
@@ -69,11 +73,10 @@ function addToOrder(item, cost){ //Adds item to total and list FINISH ORDER SUMM
 }
 
 function complete_form(){ //TEST ME
-    var size_selected = false;
-    var topping_selected = false;
+   
     
     for (var i = 0; i < form.size.length; i++){
-        if (form.size.checked){
+        if (form.size[i].checked){
             size_selected = true;
             break; //Stops the loop as condition is met
         }
@@ -81,8 +84,8 @@ function complete_form(){ //TEST ME
             size_selected = false;
         }
     }
-}   for (var i = 0; i < form.topping.length; i++){
-        if (form.topping.checked){
+   for (var i = 0; i < form.topping.length; i++){
+        if (form.topping[i].checked){
             topping_selected = true;
             break;
         }
