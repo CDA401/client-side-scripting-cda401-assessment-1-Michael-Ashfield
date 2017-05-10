@@ -47,12 +47,17 @@
                         <p>Address line 1 <input type="text" name="address_1_delivery" required/></p>
                         <p>Postcode <input type="text" name="postcode_delivery" required/></p>
                     </fieldset>
+                    <fieldset id="summery_area">
+                        <legend>Order Summery</legend>
+                       <div id="output_area">
+                        <p id="order_output"></p>
+                        <p id="total_cost_output"></p> 
+                    </fieldset>
+                    
                     <input type="submit" name="place_order" value="Place order"/>
                     <input type="submit" name="reset" value="Reset"/>
                 </form>
-                <div id="output_area">
-                    <p id="order_output"></p>
-                    <p id="total_cost_output"></p>
+
                 </div>
             </aside>
         </main>
