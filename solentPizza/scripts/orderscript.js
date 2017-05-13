@@ -72,7 +72,7 @@ function addToOrder(item, cost){ //Adds item to total and list FINISH ORDER SUMM
     document.getElementById("order_output").innerHTML = text;
 }
 
-function complete_form(){ 
+function complete_form(){ //See if loops _selected = true can be put in main loops
     for (var i = 0; i < form.size.length; i++){
         if (form.size[i].checked){
             size_selected = true;

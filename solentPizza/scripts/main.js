@@ -1,24 +1,25 @@
+var myTimer = setInterval(startTime, 500);
+var slideTimer = setInterval(slideImage, 3000);
+
 function main(){
-    console.log("Main Working")
+    document.getElementById("discountImg").addEventListener("mouseover", displayDiscountOn);
+    document.getElementById("discountImg").addEventListener("mouseout", displayDiscountOff);
 }
 
 function checkTime(i) { // add zero in front of numbers < 10
-    "use strict";
     if (i < 10) {
-        i = "0" + i
+        i = "0" + i;
     }  
     return i;
 }
 
 function convertTime(curr_hour) {
-    "use strict";
     if (curr_hour >= 12) {
         return (curr_hour - 12);
     }
 }
 
 function startTime() {
-    "use strict";
     var today = new Date(),
         curr_year = today.getFullYear(),
         curr_month = today.getMonth() + 1, //Month starts at 0, add 1 to be accurate
@@ -35,22 +36,21 @@ function startTime() {
     document.getElementById("time").innerHTML = curr_time;  
 }
 
-var myTimer = setInterval(startTime, 500);
+function displayDiscountOn(){//Rollover image
+    document.getElementById("discountImg").src = "images/homeOffer.png";
+}
 
+function displayDiscountOff(){//Rolloff image
+    document.getElementById("discountImg").src = "images/dailyDiscount.png";
+}
 
-function main() {
-    // set up a new date object 
-    var today = new Date();
-    //extract the hour min and seconds and store them in a variable 
-    var month = today.getMonth() + 1
-    var day = today.getDate()
-    var year = today.getFullYear()
-    var curr_hour = today.getHours();
-    var curr_minute = today.getMinutes();
-    var curr_second = today.getSeconds();
-    curr_minute = checkTime(curr_minute);
-    curr_second = checkTime(curr_second);
-    
-    document.getElementById("curr_time").innerHTML = 
-        day + "/" + month + "/" + year + " - " + curr_hour + ":" + curr_minute + ":" + curr_second;
-    var t = setTimeout(main, 500)
+function slideImage(){
+    var myList = ["slider1.png","slider2.png","slider3.png","slider4.png","slider5.png"];
+    var currItem = 0;
+    document.getElementById("carousel").src = myList[currItem];
+    currItem += 1;
+    if (currItem == 5){
+        currItem = 0;
+    }
+    console.log(myList[currItem])
+}
