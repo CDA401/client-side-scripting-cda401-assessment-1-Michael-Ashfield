@@ -1,3 +1,5 @@
-#first_number, #last_number, #email_atsign, #empty_email, #empty_first_name, #empty_last_name, #empty_message, #phone_checkmark, #phone_letter{
+#first_number, #last_number, #email_atsign, #empty_email, #empty_first_name, 
+#empty_last_name, #empty_message, #phone_checkmark, #phone_letter, 
+#first_name_checkmark, #last_name_checkmark, #email_checkmark, #message_checkmark{
     display: none;
 }
