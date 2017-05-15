@@ -1,7 +1,13 @@
-#container{ /*Using CSS grid to define layout*/
+body{
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    color: #FF5D00; /*house style orange*/
+}
+
+#container{ /*Using CSS grid to define layout, cloud9 doesn't support it yet but the browser does when run in new tab*/
     display: grid;
-    grid-template-rows: auto auto auto auto 300px 100px;
-    grid-template-columns: 700px 400px;
+    justify-content: center;
+    grid-template-rows: auto auto 250px 250px 300px auto;
+    grid-template-columns: auto auto;
     grid-template-areas:
         "logo clock"
         "nav nav"
@@ -11,8 +17,89 @@
         "footer footer"
 }
 
+#logo{
+    gid-area: logo;
+}
+
+#clock{
+    grid-area: clock;
+    text-align: right;
+}
+
+nav{
+    grid-area: nav;
+    text-align:center;
+}
+
+#discountArea{
+    grid-area: discountArea;
+}
+
+#imgSlider{
+    grid-area: imgSlider;
+    align-self: center;
+}
+
+#img3{
+    grid-area: img3
+}
+
+#articleText{
+    grid-area: articleText;
+    text-align: center;
+    align-self: center;
+}
+
+footer{
+    grid-area: footer;
+    background-color: rgba(0,0,0,0.2);
+    font-size: 12px;
+}
+
 
 #discountImg{
     width: 400px;
     height: 250px;
+}
+
+#img3{
+    width: 400px;
+    height: 250px;
+}
+
+#carousel{
+    width: 800px;
+    height: 500px;
+}
+
+#socMedia{
+    float: right;
+    padding-right: 20px;
+}
+
+#contactInfo{
+    float: left;
+    padding-left: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    background-color: rgba(0,0,0,0.2);
+}
+
+li {
+    display: inline;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+a{
+    text-decoration: none;
+    color: #FF5D00;
+    font-size: 22px;
+}
+
+.homeText{
+    padding: 25px 0px;
 }
