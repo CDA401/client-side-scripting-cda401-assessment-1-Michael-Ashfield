@@ -1,3 +1,99 @@
+body{
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    color: #FF5D00; /*house style orange*/
+}
+
+#container{ /*Using CSS grid to define layout, cloud9 doesn't support it yet but the browser does when run in new tab*/
+    display: grid;
+    justify-content: center;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-columns: auto auto;
+    grid-template-areas:
+        "logo logo"
+        "nav nav"
+        "contactImg contactImg"
+        "form map"
+        "footer footer"
+}
+
+#logo{
+    gid-area: logo;
+}
+
+nav{
+    grid-area: nav;
+    text-align:center;
+}
+
+#contactImg{
+    grid-area: contactImg;
+}
+
+aside{
+    grid-area: form;
+}
+
+#map{
+    grid-area: map;
+    justify-self: center; /*Another element that cloud9 doesn't understand but works in browser*/
+}
+
+footer{
+    grid-area: footer;
+    background-color: rgba(0,0,0,0.2);
+    font-size: 12px;
+}
+
+#socMedia{
+    float: right;
+    padding-right: 20px;
+}
+
+#contactInfo{
+    float: left;
+    padding-left: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    background-color: rgba(0,0,0,0.2);
+}
+
+nav li {
+    display: inline;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+nav a{
+    text-decoration: none;
+    color: #FF5D00;
+    font-size: 22px;
+}
+
+input[type=submit]{
+    background-color: rgba(0,0,0,0.2);
+    color: #FF5D00;
+    border: none;
+    margin:25px 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+input[type=text]{
+    border: 1px solid #FF5D00;
+    border-radius: 3px;
+    width:30%;
+    height: 20px;
+}
+
+#contactImg img{
+    width: 1200px;
+    height: 800px;
+}
+
+
 #first_number, #last_number, #email_atsign, #empty_email, #empty_first_name, 
 #empty_last_name, #empty_message, #phone_checkmark, #phone_letter, 
 #first_name_checkmark, #last_name_checkmark, #email_checkmark, #message_checkmark,
