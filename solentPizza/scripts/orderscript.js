@@ -46,7 +46,7 @@ function loopFormTopping(event){ //Loops size form
     }
 }
 
-function loopFormExtra(){
+function loopFormExtra(){ //loops extra form
     for (var i = 0; i < form.extra.length; i++){
         if (form.extra[i].checked){
             console.log("You selected " + form.extra[i].value);
@@ -72,8 +72,8 @@ function addToOrder(item, cost){ //Adds item to total and list FINISH ORDER SUMM
     document.getElementById("order_output").innerHTML = text;
 }
 
-function complete_form(){ //See if loops _selected = true can be put in main loops
-    for (var i = 0; i < form.size.length; i++){
+function complete_form(){ //check to see if form is complete
+    for (var i = 0; i < form.size.length; i++){ //Loops to check if any of the options is selected in size, cant be in mainloop because break is used to prevent bug
         if (form.size[i].checked){
             size_selected = true;
             break; //Stops the loop as condition is met
@@ -92,10 +92,10 @@ function complete_form(){ //See if loops _selected = true can be put in main loo
         }
     }
     
-    if (size_selected == false){
+    if (size_selected == false){ //if no size is selected display error
         document.getElementById("required_size").style.display = "block";
     }
-    else {
+    else { //if size is selected remove error
         document.getElementById("required_size").style.display = "none";
     }
     

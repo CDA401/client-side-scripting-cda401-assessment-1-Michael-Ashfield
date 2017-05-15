@@ -5,6 +5,7 @@
 		<meta name="Solent Pizzas" content="Tastey fresh pizza from the heart of Southampton">
 		<title>Solent Pizzas</title>
 		<link rel="stylesheet" href="styles/contact.css" type="text/css" />
+		<link rel="icon" href="images/favicon.png">
 		<script type="text/javascript" src="scripts/contactscript.js" rel="stylesheet"></script>
 	</head>
 	<body onload="main()">
@@ -21,12 +22,12 @@
             <aside> 
                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2516.225454283743!2d-1.4063847844325086!3d50.90104296267585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487476b66cb2f829%3A0x916bb98b648d00ae!2s158+High+St%2C+Southampton+SO14+2BT!5e0!3m2!1sen!2suk!4v1494359045516" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
             <form id="contact_form">
-                <p><input type="text" name="first_name"/><span id="first_name_checkmark">&#10004;</span><span id="first_number"> No numbers in names</span><span id="empty_first_name"> Please enter name</span></p>
-                <p><input type="text" name="last_name"/><span id="last_name_checkmark">&#10004;</span><span id="last_number"> No numbers in names</span><span id="empty_last_name"> Please enter name</span></p>
-                <p><input type="text" name="email"/><span id="email_checkmark">&#10004;</span><span id="empty_email"> Please enter email</span><span id="email_atsign"> Enter a valid email</span></p>
-                <p><input type="text" name="phone"/><span id="phone_checkmark">&#10004;</span><span id="phone_letter"> No letters in phone numbers</span></p>
-                <p><input type="text" name="message"/><span id="message_checkmark">&#10004;</span><span id="empty_message"> Enter a message</span></p>
-                <p><input type="submit" value="Submit" name="submit"/></p>
+                <p>First name* <input type="text" name="first_name"/><span id="first_name_checkmark">&#10004;</span><span id="first_number"> No numbers in names</span><span id="empty_first_name"> Please enter name</span></p>
+                <p>Last name* <input type="text" name="last_name"/><span id="last_name_checkmark">&#10004;</span><span id="last_number"> No numbers in names</span><span id="empty_last_name"> Please enter name</span></p>
+                <p>Email* <input type="text" name="email"/><span id="email_checkmark">&#10004;</span><span id="empty_email"> Please enter email</span><span id="email_atsign"> Enter a valid email</span></p>
+                <p>Phone number <input type="text" name="phone"/><span id="phone_checkmark">&#10004;</span><span id="phone_letter"> No letters in phone numbers</span></p>
+                <p>Message* <input type="text" name="message"/><span id="message_checkmark">&#10004;</span><span id="empty_message"> Enter a message</span></p>
+                <p><input type="submit" value="Submit" name="submit"/><span id="invalidForm"> Please complete form</span></p>
             </form>
             </aside>
         </main>
