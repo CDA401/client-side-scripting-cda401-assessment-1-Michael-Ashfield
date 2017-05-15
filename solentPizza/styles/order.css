@@ -3,12 +3,13 @@ body{
     color: #FF5D00; /*house style orange*/
 }
 
+/*Grid and layout*/
 #container{ /*Using CSS grid to define layout, cloud9 doesn't support it yet but the browser does when run in new tab*/
     display: grid;
     justify-content: center;
-    grid-template-rows: auto auto auto auto auto;
-    grid-template-columns: auto;
-    grid-template-areas:
+    grid-template-rows: auto auto auto auto auto; /*5 rows of auto size*/
+    grid-template-columns: auto; /*1 column*/
+    grid-template-areas: /*Grid layout*/
         "logo"
         "nav"
         "orderImg"
@@ -40,7 +41,7 @@ footer{
     font-size: 12px;
 }
 
-
+/*General styling*/
 #socMedia{
     float: right;
     padding-right: 20px;
@@ -95,6 +96,11 @@ fieldset{
     height: 800px;
 }
 
+.price_text{
+    color: green;
+}
+
+/*Required text*/
 #required_size {
     display: none;
 }

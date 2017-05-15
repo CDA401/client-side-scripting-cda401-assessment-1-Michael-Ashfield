@@ -11,6 +11,7 @@ function main(){
     var toppingform = form.topping_area;
     var extraform  = form.extra_area;
     form.addEventListener("change", loopForm);
+    form.addEventListener("submit", submitCheck)
 }
 
 function loopForm() { //Loops whole form when any part updated
@@ -104,5 +105,13 @@ function complete_form(){ //check to see if form is complete
     }
     else{
         document.getElementById("required_topping").style.display = "none";
+    }
+}
+
+function submitCheck(event){ //Checks form when submit button is pressed
+    event.preventDefault(); //Stop submit being done
+    complete_form();//runs a function to check the form
+    if(size_selected == true && topping_selected == true){ //if both topping and size are filled, submit
+        console.log("Form valid, submitting");//Would submit if website is complete
     }
 }

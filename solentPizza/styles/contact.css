@@ -3,12 +3,13 @@ body{
     color: #FF5D00; /*house style orange*/
 }
 
+/*Grid and layout*/
 #container{ /*Using CSS grid to define layout, cloud9 doesn't support it yet but the browser does when run in new tab*/
     display: grid;
     justify-content: center;
-    grid-template-rows: auto auto auto auto auto;
-    grid-template-columns: auto auto;
-    grid-template-areas:
+    grid-template-rows: auto auto auto auto auto; /*5 rows*/
+    grid-template-columns: auto auto; /*2 columns*/
+    grid-template-areas: /*define grid layout*/
         "logo logo"
         "nav nav"
         "contactImg contactImg"
@@ -44,6 +45,7 @@ footer{
     font-size: 12px;
 }
 
+/*General styling*/
 #socMedia{
     float: right;
     padding-right: 20px;
@@ -93,7 +95,7 @@ input[type=text]{
     height: 800px;
 }
 
-
+/*Error text*/
 #first_number, #last_number, #email_atsign, #empty_email, #empty_first_name, 
 #empty_last_name, #empty_message, #phone_checkmark, #phone_letter, 
 #first_name_checkmark, #last_name_checkmark, #email_checkmark, #message_checkmark,

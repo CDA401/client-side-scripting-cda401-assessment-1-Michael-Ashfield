@@ -1,5 +1,5 @@
 var myTimer = setInterval(startTime, 500); //Half second update for clock
-var slideTimer = setInterval(slideImage, 5000); //5 second loop for carousel
+var slideTimer = setInterval(slideImage, 4000); //5 second loop for carousel
 
 function main(){
     document.getElementById("discountImg").addEventListener("mouseover", displayDiscountOn);

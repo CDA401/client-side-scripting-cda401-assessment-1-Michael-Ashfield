@@ -3,12 +3,13 @@ body{
     color: #FF5D00; /*house style orange*/
 }
 
+/*Grid and layout*/
 #container{ /*Using CSS grid to define layout, cloud9 doesn't support it yet but the browser does when run in new tab*/
     display: grid;
     justify-content: center;
-    grid-template-rows: auto auto 250px 250px 300px auto;
-    grid-template-columns: auto auto;
-    grid-template-areas:
+    grid-template-rows: auto auto 250px 250px 300px auto; /*6 rows*/
+    grid-template-columns: auto auto;/*2 columns*/
+    grid-template-areas:/*The grid should be layed out like this*/
         "logo clock"
         "nav nav"
         "imgSlider discountArea"
@@ -18,7 +19,7 @@ body{
 }
 
 #logo{
-    gid-area: logo;
+    grid-area: logo; /*logo in template area is #logo*/
 }
 
 #clock{
@@ -56,7 +57,7 @@ footer{
     font-size: 12px;
 }
 
-
+/*Images*/
 #discountImg{
     width: 400px;
     height: 250px;
@@ -72,6 +73,7 @@ footer{
     height: 500px;
 }
 
+/*General styling*/
 #socMedia{
     float: right;
     padding-right: 20px;
@@ -82,19 +84,19 @@ footer{
     padding-left: 20px;
 }
 
-ul {
+nav ul {
     list-style-type: none;
     padding: 0;
     background-color: rgba(0,0,0,0.2);
 }
 
-li {
+nav li {
     display: inline;
     padding-left: 150px;
     padding-right: 150px;
 }
 
-a{
+nav a{
     text-decoration: none;
     color: #FF5D00;
     font-size: 22px;
