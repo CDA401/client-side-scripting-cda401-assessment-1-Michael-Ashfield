@@ -23,7 +23,7 @@ function loopForm() { //Loops whole form when any part updated
     loopFormExtra();
     complete_form();
     console.log("total price= " + total.toFixed(2));//Total rounded to 2 decimal place
-    document.getElementById("total_cost_output").innerHTML = "£" + total.toFixed(2);
+    document.getElementById("total_cost_output").innerHTML = "Total price £" + total.toFixed(2);
 }
 
 function loopFormSize(event){ //Loops size form

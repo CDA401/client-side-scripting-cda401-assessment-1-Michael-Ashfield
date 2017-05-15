@@ -10,7 +10,15 @@
 	</head>
 	
 	<body onload="main()">
-        <header>
+	    <div id="container">
+            <div id="logo">
+                <img src="images/soPizzaLogo.png" alt="Solent Pizzas"></img>
+            </div>
+            
+            <div id="clock">
+                <p id="time"></p>
+            </div>
+            
             <nav>
             	<ul>
             		<li><a href="index.html">Home</a></li>
@@ -18,8 +26,9 @@
             		<li><a href="contact.html">Contact</a></li>
             	</ul>
             </nav>
-        </header>
-        <main>
+            <div id="orderImg">
+                <img src="images/orderpageimg.png" alt="Iage of a fresh pizza"></img>
+            </div>
             <aside> 
                 <form id="order_form">
                     <fieldset id="size_area">
@@ -31,7 +40,7 @@
                         <p><input type="radio" name="size" value="xlarge_size" data-price="12.50" data-desc="X-Large Pizza"/>X-Large <span id="price_text">£12.50</span></p>
                     </fieldset>
                     <fieldset id="topping_area">
-                        <legend>Pick your topping*</legend>
+                        <legend>Pick one or more topping*</legend>
                         <p id="required_topping"><span class="required">Topping required</span></p>
                         <p><input type="checkbox" name="topping" value="cheese_topping" data-price="0.20" data-desc="Cheese"/>Cheese <span id="price_text">£0.20</span></p>
                         <p><input type="checkbox" name="topping" value="mushrooms_topping" data-price="0.40" data-desc="Mushrooms"/>Mushrooms <span id="price_text">£0.40</span></p>
@@ -45,23 +54,33 @@
                     </fieldset>
                     <fieldset id="delivery_area">
                         <legend>Delivery information</legend>
-                        <p>Address line 1 <input type="text" name="address_1_delivery" required/></p>
-                        <p>Postcode <input type="text" name="postcode_delivery" required/></p>
+                        <p>Address line 1 <input type="text" name="address_1_delivery" placeholder="Enter address"/></p>
+                        <p>Postcode <input type="text" name="postcode_delivery" placeholder="Enter postcode here"/></p>
                     </fieldset>
                     <fieldset id="summery_area">
                         <legend>Order Summery</legend>
-                       <div id="output_area">
-                        <p id="order_output"></p>
-                        <p id="total_cost_output"></p> 
+                        
+                            <p id="order_output"></p>
+                            <p id="total_cost_output"></p> 
                     </fieldset>
                     
-                    <input type="submit" name="place_order" value="Place order"/>
-                    <input type="submit" name="reset" value="Reset"/>
+                    <input type="submit" name="place_order" value="Place order" class="formButton"/>
+                    <input type="submit" name="reset" value="Reset" class="formButton"/>
                 </form>
-
-                </div>
             </aside>
-        </main>
+    
+            <footer>
+                <div id="contactInfo">
+                    <p class="footText">Tel - 124 5678 90</p>
+                    <p class="footText">Email - soletPizza@pizza.com</p>
+                    <p class="footText">123 Highstreet, BArgate, Southampton SO14 2F3</p>
+                </div>
+                <div id="socMedia">
+                    <p class="footText">Facebook</p>
+                    <p class="footText">Twitter</p>
+                    <p class="footText">Instagram</p>
+                </div>
+            </footer>
+        </div>
 	</body>
-
 </html>
