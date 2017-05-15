@@ -1,3 +1,17 @@
+#container{ /*Using CSS grid to define layout*/
+    display: grid;
+    grid-template-rows: auto auto auto auto 300px 100px;
+    grid-template-columns: 700px 400px;
+    grid-template-areas:
+        "logo clock"
+        "nav nav"
+        "imgSlider discountArea"
+        "imgSlider img3"
+        "articleText articleText"
+        "footer footer"
+}
+
+
 #discountImg{
     width: 400px;
     height: 250px;
